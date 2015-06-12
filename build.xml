@@ -1,0 +1,30 @@
+<project name="helloWorld" default="sayHelloWorld" basedir=".">
+    <property name="php" value="php" />
+    <property name="composer.phar" value="composer" />
+    <property name="composer.command" value="install" />
+    <property name="build.dir" value="build" />
+    <property name="assets.dir" value="app/storage/assets"/>
+    <property name="git" value="git"/>
+    
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <mkdir dir="${build.dir}"/>
+        <delete includeemptydirs="true">
+            <fileset dir="${assets.dir}" includes="**/*" defaultexcludes="no">
+                <exclude name=".gitignore"/>
+            </fileset>
+        </delete>
+    </target>
+    
+    <target name="php">
+        <exec executable="${php}" failonerror="true">
+            <arg value="a.php"/>
+            <arg value="hao"/>
+        </exec>
+        <echo message="test php "/>
+    </target>
+    
+    <target name="sayHelloWorld">
+        <echo message="Hello"/>
+    </target>
+</project>
