@@ -1,0 +1,14 @@
+{
+    "name": "extrabux/test",
+    "description": "A web application for power buyers.",
+    "license": "proprietary",
+    "require": {
+        "extrabux-php-sdk/extrabuxapi": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:Extrabux/extrabux-php-sdk.git"
+        }
+    ]
+}
